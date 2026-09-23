@@ -124,7 +124,7 @@
 <!-- MAIN WORKSPACE GRID: 12-COLUMN ADAPTIVE LAYOUT -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 <!-- LEFT / MAIN CONTENT AREA (Columns 1 to 8) -->
-<div class="lg:col-span-8 flex flex-col gap-6">
+<div id="doubtsFeedContainer" class="lg:col-span-8 flex flex-col gap-6">
 <!-- ACTIVE FEATURED DOUBT CARD -->
 <article class="rounded-2xl bg-surface-container-low p-6 sm:p-8 shadow-xl relative overflow-hidden">
 <!-- Emissive Top Edge Aura -->
@@ -699,6 +699,13 @@
       }
 
       // Universal apiFetch with automatic Bearer token injection
+      const API_BASE_URL = (window.location.origin && window.location.origin.includes(':5000')) ? window.location.origin : 'http://localhost:5000';
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str).replace(/[&<>"']/g, s => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[s]));
+      }
+
       async function apiFetch(endpoint, options = {}) {
         const token = localStorage.getItem('eduvia_token');
         const headers = new Headers(options.headers || {});
@@ -708,7 +715,8 @@
         if (options.body && !(options.body instanceof FormData) && !headers.has('Content-Type')) {
           headers.set('Content-Type', 'application/json');
         }
-        const res = await fetch(endpoint, { ...options, headers });
+        const url = endpoint.startsWith('http') ? endpoint : `${API_BASE_URL}${endpoint}`;
+        const res = await fetch(url, { ...options, headers });
         if (res.status === 401) {
           localStorage.removeItem('eduvia_token');
         }
@@ -816,13 +824,79 @@
               const data = await res.json();
               closeModal();
               askDoubtForm.reset();
-              alert(`Doubt successfully published! (${data.doubt_id || 'ID dbt_1001'}). Bounty deducted: ${data.bounty_deducted || bounty} XP`);
+
+              // Dynamically prepend newly created doubt to the feed
+              const feedContainer = document.getElementById('doubtsFeedContainer');
+              if (feedContainer) {
+                const newCard = document.createElement('article');
+                newCard.className = 'rounded-2xl bg-surface-container-low p-6 sm:p-8 shadow-xl relative overflow-hidden transition-all duration-300 border border-primary/40';
+                newCard.innerHTML = `
+                  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container via-secondary-container to-tertiary"></div>
+                  <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                    <div class="flex items-center gap-3">
+                      <img class="w-12 h-12 rounded-full object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHEm1VKlvIr1GGpW8PMjNrM8b8yyzPbNJLDoL2UNvqvy4mBubJWPJIYJdkUvUXXP_35X3Fv7xmaRRiUDQ8QONdKol7tIdhOow4MoOx90Z7nQ9aEaWGlCANxQlUbaE7B4xz_DiUp0msonFXrdSZnPEMnATTSh8GCRuJpyQ62-eueUNY-Nfc0a49ImSXn13w-kSZw0fmfxuQOGiiytGOXVpqCLx0KoESZkHM1bhzN2crcPAm7y7autvG" alt="Alex Mercer" />
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Alex Mercer (You)</span>
+                          <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Just Posted</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+                          <span>Just now</span>
+                          <span>•</span>
+                          <span>${escapeHtml(subject || 'Data Structures & Algorithms')}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container/20 text-secondary font-label-md text-label-md font-bold shadow-sm">
+                      <span class="material-symbols-outlined text-[18px]">diamond</span>
+                      <span>Bounty: +${data.bounty_deducted || bounty} XP</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-medium">#${escapeHtml(subject || 'Discussion')}</span>
+                    <span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#CommunityDoubt</span>
+                  </div>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-3 tracking-tight">
+                    ${escapeHtml(title)}
+                  </h2>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4 whitespace-pre-line">
+                    ${escapeHtml(body)}
+                  </p>
+                  <div class="flex flex-wrap items-center justify-between gap-4 pt-4 bg-surface-container-high/30 -mx-6 -mb-6 p-6 rounded-b-2xl">
+                    <div class="flex items-center gap-2">
+                      <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all" type="button">
+                        <span class="material-symbols-outlined text-tertiary text-[20px]">thumb_up</span>
+                        <span class="font-bold">0</span>
+                        <span class="hidden sm:inline">Upvotes</span>
+                      </button>
+                      <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-md hover:brightness-110 transition-all" type="button">
+                        <span class="material-symbols-outlined text-[18px]">add_comment</span>
+                        <span>Answer this Doubt</span>
+                      </button>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md">
+                      <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[18px]">forum</span>
+                        <span>0 Answers</span>
+                      </div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[18px]">visibility</span>
+                        <span>1 View</span>
+                      </div>
+                    </div>
+                  </div>
+                `;
+                feedContainer.insertBefore(newCard, feedContainer.firstChild);
+              }
+
+              alert(`Doubt successfully published! (${data.doubt_id || 'ID dbt_1001'}). Bounty deducted: ${data.bounty_deducted || bounty} XP. Remaining XP: ${data.new_user_xp_balance !== undefined ? data.new_user_xp_balance : '2,740'}`);
             } else {
               const errData = await res.json().catch(() => ({}));
-              alert(errData.error || 'Failed to publish doubt.');
+              alert(errData.error || 'Failed to publish doubt. Please check your inputs.');
             }
           } catch (err) {
-            console.warn('Publish doubt notice:', err.message);
+            console.error('Publish doubt error:', err);
+            alert(`Unable to connect to the backend server at ${API_BASE_URL}. Please ensure 'node server.js' is running.`);
             closeModal();
           } finally {
             if (publishBtn) {
