@@ -1,7 +1,7 @@
 // ==========================================
 // EDUVIA API CLIENT & AUTH HELPER (Vanilla JS)
 // ==========================================
-const API_BASE_URL = window.location.origin.includes(':5000') 
+const API_BASE_URL = (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin.includes(':5000'))
   ? window.location.origin 
   : 'http://localhost:5000';
 

@@ -30,6 +30,14 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
+process.on('unhandledRejection', (reason, promise) => {
+  console.warn('[Process] Unhandled Rejection captured:', reason?.message || reason);
+});
+
+process.on('uncaughtException', (err) => {
+  console.warn('[Process] Uncaught Exception captured:', err?.message || err);
+});
+
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => console.log(`Brain Bytes API server running on port ${PORT}`));
 }

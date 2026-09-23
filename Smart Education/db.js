@@ -68,6 +68,13 @@ try {
     enableKeepAlive: true,
     keepAliveInitialDelay: 0
   });
+
+  if (mysqlPool && typeof mysqlPool.on === 'function') {
+    mysqlPool.on('error', (err) => {
+      isMySQLAvailable = false;
+      console.warn('[Database] MySQL Pool error captured:', err.message);
+    });
+  }
 } catch (err) {
   console.warn('[Database] Initial pool error:', err.message);
 }
@@ -270,6 +277,10 @@ const pool = {
           if (isMySQLAvailable !== false) {
             isMySQLAvailable = false;
             console.warn(`[Database] MySQL connection note (${err.code}). Running with resilient in-memory data store.`);
+            if (mysqlPool) {
+              try { mysqlPool.end().catch(() => {}); } catch (e) {}
+              mysqlPool = null;
+            }
           }
           return handleMemoryQuery(sql, params);
         }
