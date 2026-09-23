@@ -1,0 +1,10 @@
+# Robots.txt for EDUVIA Platform
+# https://eduvia.ai
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /scratch/
+
+# Sitemaps
+Sitemap: https://eduvia.ai/sitemap.xml

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Student Dashboard - Progress, Streaks &amp; XP Quests | EDUVIA</title><link rel="canonical" href="https://eduvia.ai/dashboard"/><meta name="description" content="Track your daily cognitive streak, XP milestones, active STEM courses, and global leaderboard rankings on your personal Eduvia student dashboard."/><meta property="og:type" content="website"/><meta property="og:site_name" content="EDUVIA"/><meta property="og:title" content="Student Dashboard - Progress, Streaks &amp; XP Quests | EDUVIA"/><meta property="og:description" content="Track your daily cognitive streak, XP milestones, active STEM courses, and global leaderboard rankings on your personal Eduvia student dashboard."/><meta property="og:url" content="https://eduvia.ai/dashboard"/><meta property="og:image" content="https://eduvia.ai/assets/og-dashboard.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Student Dashboard - Progress, Streaks &amp; XP Quests | EDUVIA"/><meta name="twitter:description" content="Track your daily cognitive streak, XP milestones, active STEM courses, and global leaderboard rankings on your personal Eduvia student dashboard."/><meta name="twitter:image" content="https://eduvia.ai/assets/og-dashboard.png"/><script type="application/ld+json">{"@context":"https://schema.org","@type":["EducationalOrganization","LocalBusiness"],"name":"EDUVIA","url":"https://eduvia.ai/dashboard","logo":"https://lh3.googleusercontent.com/aida/AEtjO1V7AkEJKjcbhi2UCG5E-_COeiAMvVKovKy2o1HqScKeLyUt6fx1wrH8HuAgMu0_PGr9eF-mYGe3vvxTXT2qL2KbpPgR6jo0PEIPul2OhLO3ksExNLOITla51iOuJZZyKbmOVX-Vo9Yj5FngBO5TWhFGfLjpv_rHE-8mZvdgUpdd8M7ENceHdqtgn_t4fhAqQMoDEGoR4RIJelCYbNI7-l-i7WXcj3FzVIXQPZR14IFB3Ga9aXW52ITl0bo","description":"Next-generation AI-powered edtech platform offering 24/7 Socratic tutoring, Feynman technique voice evaluation, and peer doubt communities.","address":{"@type":"PostalAddress","streetAddress":"450 Serra Mall","addressLocality":"Stanford","addressRegion":"CA","postalCode":"94305","addressCountry":"US"},"contactPoint":{"@type":"ContactPoint","telephone":"+1-650-723-2300","contactType":"Customer Support","availableLanguage":["English"]}}</script><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#171b26", "error-container": "#93000a", "on-background": "#dfe2f1", "on-surface-variant": "#c3c6d7", "on-primary-fixed": "#00174b", "primary-container": "#2563eb", "surface-bright": "#353944", "secondary-fixed-dim": "#d2bbff", "on-error": "#690005", "on-tertiary": "#003640", "secondary-fixed": "#eaddff", "tertiary-fixed-dim": "#4cd7f6", "on-secondary-fixed": "#25005a", "surface-container-high": "#262a35", "tertiary": "#4cd7f6", "on-tertiary-fixed": "#001f26", "surface-container-lowest": "#0a0e18", "outline-variant": "#434655", "on-secondary": "#3f008e", "on-tertiary-fixed-variant": "#004e5c", "on-primary-fixed-variant": "#003ea8", "primary-fixed": "#dbe1ff", "inverse-on-surface": "#2c303b", "error": "#ffb4ab", "tertiary-fixed": "#acedff", "surface-dim": "#0f131d", "outline": "#8d90a0", "surface": "#0f131d", "surface-container": "#1c1f2a", "inverse-primary": "#0053db", "secondary": "#d2bbff", "surface-container-highest": "#313540", "primary-fixed-dim": "#b4c5ff", "on-secondary-fixed-variant": "#5a00c6", "on-primary": "#002a78", "on-error-container": "#ffdad6", "on-primary-container": "#eeefff", "on-surface": "#dfe2f1", "tertiary-container": "#00788c", "on-tertiary-container": "#d7f6ff", "primary": "#b4c5ff", "secondary-container": "#6001d1", "surface-tint": "#b4c5ff", "background": "#0f131d", "inverse-surface": "#dfe2f1", "surface-variant": "#313540", "on-secondary-container": "#c9aeff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "gutter": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-lg": [ "Inter" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "label-sm": [ "Inter" ], "body-md": [ "Inter" ], "display-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="../eduvia_landing_page/code.html"><img alt="EDUVIA Platform Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V7AkEJKjcbhi2UCG5E-_COeiAMvVKovKy2o1HqScKeLyUt6fx1wrH8HuAgMu0_PGr9eF-mYGe3vvxTXT2qL2KbpPgR6jo0PEIPul2OhLO3ksExNLOITla51iOuJZZyKbmOVX-Vo9Yj5FngBO5TWhFGfLjpv_rHE-8mZvdgUpdd8M7ENceHdqtgn_t4fhAqQMoDEGoR4RIJelCYbNI7-l-i7WXcj3FzVIXQPZR14IFB3Ga9aXW52ITl0bo"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">EDUVIA</span></a><span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-secondary-container/30 border border-secondary/30 text-secondary font-label-sm text-label-sm uppercase tracking-wider">AI 2.0</span></div><nav class="hidden xl:flex items-center gap-1 bg-surface-container-lowest/60 p-1 rounded-xl border border-outline-variant/20" data-active-classes="bg-surface-container-high text-on-surface font-label-md"><a class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="home" href="../eduvia_landing_page/code.html">Home</a><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-all bg-surface-container-high text-on-surface font-label-md" data-path="dashboard" href="code.html">Dashboard</a><a class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="courses" href="#">Courses</a><a class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="ai-tutor" href="../24_7_ai_tutor_workspace/code.html">AI Tutor 24/7</a><a class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="student-doubts" href="../student_doubt_community/code.html">Student Doubts</a><a class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="leaderboard" href="#">Leaderboard</a><a class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="network" href="#">Network</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-label-md text-label-md"><span class="material-symbols-outlined text-[18px] text-tertiary">local_fire_department</span><span class="font-bold">12 Days</span></div><div class="hidden md:flex flex-col justify-center px-space-sm py-1 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface"><div class="flex items-center gap-1 font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-primary">bolt</span><span class="font-bold">2,840 XP</span><span class="text-on-surface-variant text-[10px]">(L4)</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-0.5"><div class="bg-primary h-full rounded-full w-3/4"></div></div></div><button class="relative p-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="hidden sm:inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_-2px_rgba(37,99,235,0.4)] hover:brightness-110 transition-all" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Ask Doubt</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Alex Mercer - Student profile avatar" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHEm1VKlvIr1GGpW8PMjNrM8b8yyzPbNJLDoL2UNvqvy4mBubJWPJIYJdkUvUXXP_35X3Fv7xmaRRiUDQ8QONdKol7tIdhOow4MoOx90Z7nQ9aEaWGlCANxQlUbaE7B4xz_DiUp0msonFXrdSZnPEMnATTSh8GCRuJpyQ62-eueUNY-Nfc0a49ImSXn13w-kSZw0fmfxuQOGiiytGOXVpqCLx0KoESZkHM1bhzN2crcPAm7y7autvG"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface"></span></div><span class="hidden lg:inline font-label-md text-label-md text-on-surface font-semibold">Alex M.</span></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<!-- Top Welcome Banner -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container p-6 lg:p-8 shadow-xl">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-20 w-64 h-64 rounded-full bg-secondary-container/15 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-wider">Academic Term 2025</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Active Session</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Good morning, Alex 👋</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Ready to continue your learning journey? You're only 2 tasks away from hitting today's acceleration target.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-low text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">military_tech</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Rank Tier</p>
+<p class="font-label-md text-label-md font-bold">Level 4 • Problem Solver</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-low text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">public</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Global Standing</p>
+<p class="font-label-md text-label-md font-bold">#482 <span class="text-tertiary text-xs font-normal font-mono">(Top 1.2%)</span></p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-low text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">diamond</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Division</p>
+<p class="font-label-md text-label-md font-bold text-secondary">Diamond Div II</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Streak & Habit Command Center -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Huge Highlighted Streak Card -->
+<div class="lg:col-span-7 flex flex-col justify-between rounded-2xl bg-surface-container p-6 lg:p-7 shadow-xl relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-gradient-to-br from-tertiary-container/30 to-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-surface-container-lowest shadow-md">
+<span class="material-symbols-outlined text-[32px] text-error animate-pulse" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="absolute -top-1 -right-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">12 Day Streak</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">HOT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Keep learning today to reach 13 days! Streak protected for 6 hours.</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">XP Multiplier</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">1.4x Active</span>
+</div>
+</div>
+<!-- Progress tracker -->
+<div class="mt-6 space-y-2">
+<div class="flex justify-between items-center text-on-surface">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">Today's Target</span>
+<span class="text-on-surface-variant font-label-md text-label-md">3 of 5 micro-tasks completed</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">60%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-lowest overflow-hidden p-0.5 shadow-inner">
+<div class="h-full rounded-full bg-gradient-to-r from-primary via-tertiary to-secondary transition-all duration-700 w-[60%]"></div>
+</div>
+</div>
+<!-- Streak Calendar Dots -->
+<div class="mt-5 grid grid-cols-7 gap-2">
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">M</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">T</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">W</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">T</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">F</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-highest shadow-sm">
+<span class="font-label-sm text-label-sm text-primary font-bold">TODAY</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-lowest opacity-50">
+<span class="font-label-sm text-label-sm text-on-surface-variant">S</span>
+<span class="material-symbols-outlined text-[18px] text-outline">schedule</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4 bg-surface-container-low -mx-6 -mb-6 p-6">
+<div class="flex items-center gap-4 text-on-surface-variant text-label-sm font-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface">history</span> Longest: <strong class="text-on-surface font-semibold">27d</strong>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span> Today: <strong class="text-tertiary font-semibold">+120 XP</strong>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">ac_unit</span> Freezes: <strong class="text-secondary font-semibold">2 avail</strong>
+</span>
+</div>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Continue Streak (+40 XP)</span>
+</button>
+</div>
+</div>
+<!-- Daily Quest & AI Quick Doubt -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Daily Challenge Card -->
+<div class="rounded-2xl bg-surface-container p-6 shadow-xl relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-xl bg-surface-container-highest text-tertiary">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Daily Quest</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Expires when day clock resets</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-error font-mono text-label-sm font-label-sm shadow-sm" id="quest-countdown">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span id="timer-val">08h : 24m : 11s</span>
+</div>
+</div>
+<div class="my-4">
+<p class="font-body-md text-body-md text-on-surface font-medium leading-snug">Solve 3 programming questions or review 1 student doubt in Systems.</p>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">+100 XP</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold">🔥 Streak Freeze</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-tertiary font-label-sm text-label-sm font-semibold">🏆 Quest Badge</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-4 pt-2">
+<div class="flex -space-x-2">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-label-sm font-label-sm text-primary font-bold">1</span>
+<span class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-label-sm font-label-sm text-on-surface-variant font-bold opacity-70">2</span>
+<span class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-label-sm font-label-sm text-on-surface-variant font-bold opacity-40">3</span>
+</div>
+<button class="px-4 py-2 rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span>Start Quest</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 24/7 AI Quick-Doubt Floating Launcher -->
+<div class="rounded-2xl bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container p-4 shadow-xl">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">EDUVIA AI Copilot</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant 1-Click Solve</span>
+</div>
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl p-1.5 shadow-inner">
+<span class="material-symbols-outlined text-outline px-2 text-[20px]">search_spark</span>
+<input class="w-full bg-transparent border-0 focus:outline-none text-on-surface placeholder:text-outline font-body-md text-body-md py-1.5 pr-2" placeholder="Drop your doubt here (formula, snippet, concept)..." type="text"/>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-2 text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Upload diagram / scan" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</button>
+<button class="p-2 text-outline hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Audio query" type="button">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1 shadow-md hover:brightness-110 transition-all" type="button">
+<span>Ask AI</span>
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Courses Grid -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Continue Learning</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pick up exactly where you paused. Next milestone rewards waiting.</p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-fixed flex items-center gap-1 font-semibold" href="#">
+<span>All 6 Enrolled Courses</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group flex flex-col justify-between rounded-2xl bg-surface-container overflow-hidden shadow-xl hover:-translate-y-1 transition-all duration-200">
+<div class="relative h-40 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean modern programming workspace screen showing Python asynchronous code syntax, glowing cyan and blue visual nodes, dark moody tech aesthetic with high depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8AetC9f84ayzxtNAad8hqXgMOdgyUSx2jojKEq-n7theTwGN4T69mQ-2vMlHMmo9NFYO-U5QBWgvcFKfVBFMhEUtu6VkLG_CQ3Hr_683pJuIM83cUZVW89OUyRv6aM3ttYQF1wXgOwESQYRBRYiMwqjF36sGwicXFG1RhhII0cB6uYIwW-Gv57RQiG_jgWMzz8uJghXULGmsuOvMsFjfrOmSfGLc4r-GzmLa8JfemQDm4bNnd7pwh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur text-primary font-label-sm text-label-sm font-semibold uppercase">Computer Science</span>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur text-on-surface font-mono text-label-sm font-label-sm">45m left</span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-1">Python &amp; System Design</h3>
+<p class="mt-1 text-on-surface-variant font-body-sm text-body-sm line-clamp-1">Next: <span class="text-on-surface font-medium">Asyncio &amp; Concurrency Engine</span></p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">18/26 lessons</span>
+<span class="text-primary font-bold">68%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-primary w-[68%]"></div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Instructor headshot portrait of a senior engineering lecturer with warm lighting, dark blue backdrop, professional modern tech educator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWBI9rAAmcxgEQq-3vX3hEusHH2d7_go67BCsYfQ-xglj6_ygShhsJa9YyEHB4zv4P_etQjWHCICyjdRPwO0BuYsOgbiJus8DDzCvU_dJ5tElx1g1-X16CdQSY34dKUxxCcLluYITbE38IhmCt2vRCTgS_xnvrrFstLUGZgo4iyyE5V0yP7k4oYodsHErGdVeQyc3J56inBBoMSbVA8-qmAyem9hXsXl4X9qFLDuoRzkyTyvuXhk5F"/>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[90px]">Dr. Thorne</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-highest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col justify-between rounded-2xl bg-surface-container overflow-hidden shadow-xl hover:-translate-y-1 transition-all duration-200">
+<div class="relative h-40 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Abstract luminous data structure visualization with binary tree graphs glowing in soft electric blue and purple on a dark cybernetic grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxdG4LHyiS_WICleiMcx7qNEC-DEkpZO1FzpvGxuSYzbMxzXI-UBvE_7q3shcTeME1Wp_yRrTiJVOtUL5vky6OWVFG0ikicYadoLMJZj4zZK99EzlhJmEPXV0W2FgvbsRuzSlbcUssgswL_PxeI8Z7QTT49lEvh9p3SFuEkN2qbHEHzUSPzTlW0X2peYzGAKPmaGZhik7KJXnkQgu2xfQJDbG7cyDPrvK9o7Mq8Anzo4dGFcA1hSoW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur text-secondary font-label-sm text-label-sm font-semibold uppercase">Algorithms</span>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur text-on-surface font-mono text-label-sm font-label-sm">1h 10m left</span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors line-clamp-1">Data Structures &amp; Alg</h3>
+<p class="mt-1 text-on-surface-variant font-body-sm text-body-sm line-clamp-1">Next: <span class="text-on-surface font-medium">Binary Search Trees &amp; Rebalance</span></p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">12/28 lessons</span>
+<span class="text-secondary font-bold">42%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-secondary w-[42%]"></div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of an algorithm researcher wearing glasses, high tech academic lab environment, soft cool ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjtG3wOIKNFFRp8uBfzdDcnVMzhh7e1SAwlsq5DffvU1ifQKm8Y2qI0bg_EVZh9j95PLU_cfCA3UK-Z2jDk3aCGSCbpsEQ3duEWSCTFhKhR2teGkYo8sJs3evsZgLGVBlJq6wR_gXOBFbi-0Li9nxm-5FJo_s0NuxiMkMtL6I70rvlyM8nDswhtEqVQCmaArnQeCjX3czRGwCBAoWByQL4slw4vA0NoaHDtaGvjPZbh3AWIg_VCr-0"/>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[90px]">Prof. Mehta</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-highest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col justify-between rounded-2xl bg-surface-container overflow-hidden shadow-xl hover:-translate-y-1 transition-all duration-200">
+<div class="relative h-40 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Macro view of a modern semiconductor microprocessor chip illuminated with cyan logic traces and microcircuits in a clean robotics laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk8XoSMf5nAujkzuiMzYno4uAEb0m5dHuvFD_Dx8cpnW2pGR_xzM2-gF6Cjv1bM25iSRTVBMQW9PBMa6QbopXdVh048zFV7K86IoOZ_uNhFFlOMMiCi65FclynHBFjfX3eaRdKlOYIHTUxJFCWzE9RupNWEaEaM02eQESgKsAwEcwsyRkfs1jB-zjvXmNIZwi78FEmvMIm67gQlF_i83pXGuiBGkFNoYhDlTWiGiKXeeZCVS6jkQ9t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur text-tertiary font-label-sm text-label-sm font-semibold uppercase">Hardware</span>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur text-on-surface font-mono text-label-sm font-label-sm">20m left</span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-tertiary transition-colors line-clamp-1">Digital Electronics</h3>
+<p class="mt-1 text-on-surface-variant font-body-sm text-body-sm line-clamp-1">Next: <span class="text-on-surface font-medium">K-Map 5-Variable Optimization</span></p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">21/26 lessons</span>
+<span class="text-tertiary font-bold">81%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-tertiary w-[81%]"></div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of an electrical engineering specialist in a maker space lab with oscilloscopes in the blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiOlD83-UWFwFAbb1szGbvDgLIS9OUciVU3vBWZh8O70mMOlf22MKq4oudQ3kpGdYO4ZtOdbAsEXNu3fOIqtg6qmblYq-mcoyrQ96mggEDOWwxE6QZGCaxqTMb_fYzDlZNXsaeWqiAI_PzsZJPJqTLmu38FP06HFNUO_MGZKBEtaLg3FlqVGMmjEX_vy-2oflI8z14NimnhukdYVE0Hmixio8YvMdvIKm3teh9m0TrfkVconS4tSp2"/>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[90px]">Elena Rostova</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-highest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col justify-between rounded-2xl bg-surface-container overflow-hidden shadow-xl hover:-translate-y-1 transition-all duration-200">
+<div class="relative h-40 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Complex 3D mathematical manifold surface geometry rendered in clean isometric wireframe with radiant cyan and deep indigo lighting effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO4oF2vAPyVX8Q-pQqOgPMkyIkOXFcp3ZV-EHLPKnobx9qKJsqk82LqK7OtBiyUFr6lyuCHVt-cYIDhCwi2W6ZAslNVHPTg-ThOm2Br_vf0wLZsOXWWUease_6wK0qcep4i3wI4831rBF-NbfLIHKNwdEnaAL1cUR5DQS5MpuaJfh7YqPQbLNtis76DJIYaarldHHeS0FgKpDo4G6QwIQ81xErMnM37yoj58x7pOXkTmBb8ZsemimQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur text-primary-fixed font-label-sm text-label-sm font-semibold uppercase">Mathematics</span>
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur text-on-surface font-mono text-label-sm font-label-sm">1h 40m left</span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-1">Applied Engineering Math</h3>
+<p class="mt-1 text-on-surface-variant font-body-sm text-body-sm line-clamp-1">Next: <span class="text-on-surface font-medium">Eigenvalues &amp; Matrix Transforms</span></p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">9/24 lessons</span>
+<span class="text-primary font-bold">35%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-primary w-[35%]"></div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Friendly university mathematics tutor in front of modern glass blackboard with calculus equations written in neon markers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHOK9xUdOv5xkatqWhEiNaC-9EC6JA61FKLm90yksFSPOO5mdPwIzPLr0auAojg1cxXfmf0p15dpxYO-TFnDvlJaCa4d1nEIc_y9DzL1d25VxrArICArhGEagBBQHSyE7_wCtCzLjzkLe1O1NryE5-SPJHA_OcoSdozGbjAH7NMhF4Gmk6ls-YFeU9Syqai_V86XWgWrLoDmSifwNgh-Db3vll2DMDZF4uDm_31dso9EI8KuJWeUe7"/>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[90px]">Dr. Harrison</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-highest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Doubts & League Standings Bottom Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Doubts in Strong Subjects -->
+<div class="lg:col-span-8 space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[22px]">handshake</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Doubts in Your Strong Subjects</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Answer peer questions to sharpen your mastery and collect quick bounty XP.</p>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm font-bold tracking-wide">+50 XP per Verified Solve</span>
+</div>
+<div class="space-y-3">
+<!-- Doubt Item 1 -->
+<div class="p-5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-2 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold">C++ Algorithms</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Asked by <strong class="text-on-surface font-medium">Priya S.</strong> 18m ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Why does my quicksort recursion throw stack overflow on sorted array?</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 2 upvotes</span>
+<span class="flex items-center gap-1 text-error"><span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span> 0 answers yet</span>
+<span class="flex items-center gap-1 text-tertiary"><span class="material-symbols-outlined text-[16px]">bolt</span> +50 XP Bounty</span>
+</div>
+</div>
+<button class="shrink-0 px-4 py-2 rounded-xl bg-surface-container-highest hover:bg-primary-container text-on-surface hover:text-on-primary-container font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Draft Answer</span>
+</button>
+</div>
+<!-- Doubt Item 2 -->
+<div class="p-5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-2 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-tertiary font-label-sm text-label-sm font-semibold">Digital Electronics</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Asked by <strong class="text-on-surface font-medium">Marcus K.</strong> 42m ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Difference between Moore and Mealy state machines in gate latency?</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 5 upvotes</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">forum</span> 1 answer</span>
+<span class="flex items-center gap-1 text-tertiary"><span class="material-symbols-outlined text-[16px]">bolt</span> +50 XP Bounty</span>
+</div>
+</div>
+<button class="shrink-0 px-4 py-2 rounded-xl bg-surface-container-highest hover:bg-primary-container text-on-surface hover:text-on-primary-container font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Draft Answer</span>
+</button>
+</div>
+<!-- Doubt Item 3 -->
+<div class="p-5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-2 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-semibold">Linear Algebra</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Asked by <strong class="text-on-surface font-medium">Rohan G.</strong> 1h ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Intuitive geometric proof for Cayley-Hamilton theorem matrix substitution?</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 8 upvotes</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">forum</span> 2 answers</span>
+<span class="flex items-center gap-1 text-tertiary"><span class="material-symbols-outlined text-[16px]">bolt</span> +50 XP Bounty</span>
+</div>
+</div>
+<button class="shrink-0 px-4 py-2 rounded-xl bg-surface-container-highest hover:bg-primary-container text-on-surface hover:text-on-primary-container font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Draft Answer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Gamification & League Standings -->
+<div class="lg:col-span-4 rounded-2xl bg-surface-container p-6 shadow-xl space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Diamond League</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-mono text-label-sm font-label-sm">2d 14h left</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top 3 advance to <strong class="text-secondary font-semibold">Master League</strong> on Sunday reset. You are 70 XP away from promotion!</p>
+<!-- Ranking Table -->
+<div class="space-y-2">
+<!-- Rank 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="w-6 text-center font-bold font-mono text-label-md text-yellow-400">#1</span>
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of an ambitious student profile avatar with bright warm rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2vlox35XIdNxeYPpgSrV3Af3zf0EYkPQ05Lz3VKu48iTNzBq8JNq_HrahaepkmRtm0zMIv9zpiDkJuuzHXPTFaFLYatE5LD-KV8mSsIr9KVjhQmcz2yeeWyMd4lV7vF1irLCkdOUywIRN4RLGOqf-3ViVUw5G7WdHnV18d5YH3PYXBVrgfTffLf5iiTFJl5HbUralHqJalGJ7qRKD_BgD1wYPv50FvpA4G9x9YwF53BgmI3fw2zUS"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate max-w-[110px]">Jordan V.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-md text-label-md font-bold text-on-surface">3,120 XP</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">arrow_upward</span>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="w-6 text-center font-bold font-mono text-label-md text-slate-300">#2</span>
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Avatar portrait of student learner in cyber aesthetic neon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnn5qAbyrgKyB6vMkuDOVapSYb12uGvRL2v3EjQhyg3RhTuwmrKF90ekONETgGoKNfkNrn4im_jq2kLB2Xidnb3OYw4nlwqulPYRHimDWVRiWWcIURBHxsciHs0yDo-qiL3M3Hk0kjZVUFV-RP3_T0vCTqXqjUQBA8X8-IZVqMrPXTWaqCwvwhvkCbyRrSUODtKyJsOqSh34B89iR6k2bZF_d6BynZDfHK2VjzjmgkwuARLH5aZjxu"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate max-w-[110px]">Tanya R.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-md text-label-md font-bold text-on-surface">2,990 XP</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">arrow_upward</span>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="w-6 text-center font-bold font-mono text-label-md text-amber-600">#3</span>
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Avatar of student wearing headphones study session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVvbDgBfdzI8bddUmXBPw5rEsc1IW-EDiGp8SSXR0Y-nE4ESxDM3j_VQlA7zD49s3LcDxcvF32K_73TIBhYSb0E_uP6eHpeVb3l_F2X7rGGlL57aMh5R65HcxB-CingNdJ2fMIY5LQ-11ah-h6P_AWrLoGYjCSMx98Jo8w9hwFll5JxqQlHV2oyG9vJi8_DXHX3xSUw8dQpdhO46VxSHYKv_rUvAC0VWb6_eygZr2sPMy6LTgtvvfb"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate max-w-[110px]">Leo Zhao</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-md text-label-md font-bold text-on-surface">2,910 XP</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">arrow_upward</span>
+</div>
+</div>
+<!-- Promotion cut-off line indicator -->
+<div class="relative py-1 flex items-center justify-center">
+<div class="w-full border-t border-dashed border-tertiary/40"></div>
+<span class="absolute px-2 bg-surface-container text-tertiary font-label-sm text-label-sm uppercase tracking-wider">▲ Promotion Cutoff ▲</span>
+</div>
+<!-- Rank 4 - Alex (Current User Highlighted) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-primary-container/20 shadow-md">
+<div class="flex items-center gap-3">
+<span class="w-6 text-center font-bold font-mono text-label-md text-primary">#4</span>
+<div class="relative">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Close up profile avatar portrait of Alex the modern college student learner in studio dark lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASgBqC3hm_K3_15gI_E-bydp4SkNMyG26k8lMsfNogsOmB3yJ9MYXbSeq_hp01ROpxTrYxyoxtvOqCainRKV93uKK_8I3bqqNkElCiyirnxLQNZY_8thruX41bFTPhgaZu36ChJm2-Y9C1gx51OMLSgP2RengcWpXdDZb6dCaQ3iRUX5PnAJEIxPF7XB5z2modQc72pFeESx6333XPCmd6youqN4XJrnwty9Yo96a5ToSvXaxVPh24"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-primary truncate max-w-[90px]">Alex (You)</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container text-on-primary-container text-[10px] font-bold">L4</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-md text-label-md font-bold text-primary">2,840 XP</span>
+<span class="material-symbols-outlined text-[16px] text-outline">horizontal_rule</span>
+</div>
+</div>
+<!-- Rank 5 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low opacity-75">
+<div class="flex items-center gap-3">
+<span class="w-6 text-center font-bold font-mono text-label-md text-on-surface-variant">#5</span>
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Student avatar portrait in university library setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYTjFG0ttZ3Sjdb2oIS0vZRfHQCn2Zgj6SYSYdd2R0AG7w-5ASU9smIftdjncZTSvuQXzrSgfQiUPJNyl5fvpLwEg2BZkUgOvBi0x59HFzK0vDukEcpjm3POjRPLqUjAFyO1EIJaHCY5yiFImJww5mui3vav3O89h_fTzi6Nax-5SaE9oer5xH9Bt3S7-zGq7IlYWW5EXABvB4cbazcDCkWY78zqQixNm18QjqMe3e9D_wm26a3oKq"/>
+<span class="font-label-md text-label-md text-on-surface-variant truncate max-w-[110px]">Karim N.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-md text-label-md font-medium text-on-surface-variant">2,760 XP</span>
+<span class="material-symbols-outlined text-[16px] text-error">arrow_downward</span>
+</div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" href="#">
+<span>View Full League Table (30 Students)</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initDashboardClock() {
+    let secondsLeft = 8 * 3600 + 24 * 60 + 11;
+    const timerElem = document.getElementById('timer-val');
+    if (!timerElem) return;
+
+    setInterval(() => {
+      if (secondsLeft <= 0) return;
+      secondsLeft--;
+      const hours = Math.floor(secondsLeft / 3600).toString().padStart(2, '0');
+      const mins = Math.floor((secondsLeft % 3600) / 60).toString().padStart(2, '0');
+      const secs = (secondsLeft % 60).toString().padStart(2, '0');
+      timerElem.textContent = `${hours}h : ${mins}m : ${secs}s`;
+    }, 1000);
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 pt-space-xl pb-space-lg"><div class="w-full px-space-lg"><div class="flex flex-col md:flex-row items-center justify-between gap-space-md pb-space-lg border-b border-outline-variant/10"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-md text-label-md text-on-surface font-semibold">AI Tutor Engine</span></div><span class="text-on-surface-variant text-label-sm font-label-sm bg-surface-container-high px-space-sm py-0.5 rounded-full border border-outline-variant/20">Online &amp; Ready (12ms latency)</span></div><div class="flex flex-wrap items-center gap-space-lg text-on-surface-variant font-label-md text-label-md"><a class="hover:text-on-surface transition-colors" href="#">Curriculum Standards</a><a class="hover:text-on-surface transition-colors" href="#">Accreditation</a><a class="hover:text-on-surface transition-colors" href="#">Research Labs</a><a class="hover:text-on-surface transition-colors" href="#">Privacy Framework</a><a class="hover:text-on-surface transition-colors" href="#">System Status</a></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 EDUVIA Intelligent Systems Inc. Precision adaptive cognitive acceleration platform.</p><p class="font-label-sm text-label-sm text-outline">ISO 27001 Certified • FERPA Compliant</p></div></div></footer></body></html>

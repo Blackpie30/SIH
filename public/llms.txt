@@ -1,0 +1,24 @@
+# EDUVIA - Precision Adaptive Cognitive Acceleration Platform
+
+> Next-generation AI-powered educational technology offering 24/7 Socratic tutoring, Feynman technique voice evaluation, and peer doubt communities for university STEM learners.
+
+## Core Capabilities
+- **24/7 AI Tutor**: Interactive Socratic guidance in algorithms, systems engineering, calculus, and machine learning with real-time vector memory heap visualization.
+- **Feynman Voice Evaluator**: Audio capture and AI analysis evaluating student voice explanations across clarity, intuition, and technical precision (`/api/v1/feynman/evaluate-voice`).
+- **Student Dashboard**: Progress tracking, cognitive habit streaks, XP bounties, and global leaderboard status.
+- **Peer Doubt Community**: Real-time peer-to-peer knowledge network with AI duplicate pre-analysis and XP bounty staking.
+
+## Key Web Pages
+- Home / Landing: `https://eduvia.ai/`
+- AI Tutor Workspace: `https://eduvia.ai/ai-tutor`
+- Student Dashboard: `https://eduvia.ai/dashboard`
+- Peer Doubt Community: `https://eduvia.ai/community`
+
+## API Specifications
+- Authentication: `POST /api/v1/auth/login` (Returns Bearer JWT)
+- Voice Evaluation: `POST /api/v1/feynman/evaluate-voice` (Multipart Form with `audio/webm` Blob)
+- Doubt Management: `POST /api/v1/doubts` (Create and query peer questions)
+
+## Technical Architecture
+- Frontend: Semantic HTML5, Tailwind CSS design system tokens, Vanilla JS modular ES architecture.
+- Backend: Node.js / Express REST API with modular controllers, SQLite persistence, and JWT authentication.
